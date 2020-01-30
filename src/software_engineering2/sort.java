@@ -2,13 +2,40 @@ package software_engineering2;
 
 public class sort {
 
-	public static void main(String[] args) {
-		int arr[]= {1,4,3,7,6,5,99,88,76};
-		for(int i=0;i<arr.length;i++)
+	static void sort(int arr[])
+	{
+		for(int i=0;i<9;i++)
 		{
-			System.out.println(arr[i]);
+			
+			for(int  j=i+1;j<9;j++)
+			{
+				
+				if(arr[j]<arr[i])
+				{
+					
+					int temp=arr[j];
+					arr[j]=arr[i];
+					arr[i]=temp;
+				}
+				
+			}
+			
+			
 		}
+		
+		
+		
+	}
 
+	public static void main(String[] args) {
+		
+		int arr[]= {2,4,1,66,3,8,22,44,11};
+		sort(arr);
+		for(int i=0;i<9;i++)
+		{
+			System.out.print(arr[i]+" ");
+		}
+		
 	}
 
 }
